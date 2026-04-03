@@ -1,0 +1,68 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1080" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17324C"/>
+      <stop offset="1" stop-color="#0F243A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="560" y1="280" x2="812" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F07A3B"/>
+      <stop offset="1" stop-color="#D95B30"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="24" y="24" width="1152" height="652" rx="36" fill="url(#bg)"/>
+  <circle cx="1038" cy="122" r="150" fill="#FFFFFF" fill-opacity="0.05"/>
+  <circle cx="142" cy="572" r="212" fill="#D95B30" fill-opacity="0.07"/>
+
+  <text x="72" y="92" fill="#FFCEBA" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="4">GREGORIGIN</text>
+  <text x="72" y="154" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">PathFlow Guard</text>
+  <text x="72" y="206" fill="#D4DEEA" font-family="Arial, Helvetica, sans-serif" font-size="24">Digital pathology QC, SVS sampling, manifesting, and routed ingestion.</text>
+  <text x="72" y="242" fill="#D4DEEA" font-family="Arial, Helvetica, sans-serif" font-size="24">Executable Python app with native-ready C++ and Rust extensions.</text>
+
+  <rect x="72" y="292" width="220" height="144" rx="24" fill="#F7F7FB" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="98" y="336" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Problem</text>
+  <text x="98" y="368" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="154" lengthAdjust="spacingAndGlyphs">Manual rescans,</text>
+  <text x="98" y="390" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="145" lengthAdjust="spacingAndGlyphs">hidden artifacts,</text>
+  <text x="98" y="412" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="138" lengthAdjust="spacingAndGlyphs">bandwidth waste,</text>
+  <text x="98" y="434" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="137" lengthAdjust="spacingAndGlyphs">weak traceability</text>
+
+  <rect x="320" y="292" width="220" height="144" rx="24" fill="#FFFFFF"/>
+  <text x="346" y="336" fill="#17324C" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Input</text>
+  <text x="346" y="368" fill="#5B687A" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="112" lengthAdjust="spacingAndGlyphs">Request JSON,</text>
+  <text x="346" y="390" fill="#5B687A" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="94" lengthAdjust="spacingAndGlyphs">tile folders,</text>
+  <text x="346" y="412" fill="#5B687A" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="165" lengthAdjust="spacingAndGlyphs">or OpenSlide-backed</text>
+  <text x="346" y="434" fill="#5B687A" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="72" lengthAdjust="spacingAndGlyphs">SVS files</text>
+
+  <rect x="568" y="292" width="220" height="144" rx="24" fill="url(#accent)"/>
+  <text x="594" y="336" fill="#FFF7F3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Engine</text>
+  <text x="594" y="368" fill="#FFF0EA" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="135" lengthAdjust="spacingAndGlyphs">Metric extraction,</text>
+  <text x="594" y="390" fill="#FFF0EA" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="101" lengthAdjust="spacingAndGlyphs">decision rules,</text>
+  <text x="594" y="412" fill="#FFF0EA" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="82" lengthAdjust="spacingAndGlyphs">manifests,</text>
+  <text x="594" y="434" fill="#FFF0EA" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="126" lengthAdjust="spacingAndGlyphs">audit persistence</text>
+
+  <rect x="816" y="292" width="300" height="144" rx="24" fill="#F7F7FB" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="842" y="336" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Output</text>
+  <text x="842" y="368" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="125" lengthAdjust="spacingAndGlyphs">Accepted, review,</text>
+  <text x="842" y="390" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="108" lengthAdjust="spacingAndGlyphs">rejected lanes,</text>
+  <text x="842" y="412" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="89" lengthAdjust="spacingAndGlyphs">SQLite jobs,</text>
+  <text x="842" y="434" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="15" textLength="150" lengthAdjust="spacingAndGlyphs">audit JSON plus API</text>
+
+  <path d="M292 364H316" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="316,364 302,354 302,374" fill="#FFFFFF"/>
+  <path d="M540 364H564" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="564,364 550,354 550,374" fill="#FFFFFF"/>
+  <path d="M788 364H812" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="812,364 798,354 798,374" fill="#FFFFFF"/>
+
+  <rect x="72" y="484" width="1044" height="124" rx="28" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <rect x="106" y="520" width="160" height="44" rx="22" fill="#21725E" fill-opacity="0.18" stroke="#21725E" stroke-opacity="0.36"/>
+  <text x="146" y="548" fill="#BDE5DA" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">ACCEPT</text>
+  <rect x="314" y="520" width="160" height="44" rx="22" fill="#AF6A17" fill-opacity="0.18" stroke="#AF6A17" stroke-opacity="0.36"/>
+  <text x="352" y="548" fill="#F1DEB8" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">REVIEW</text>
+  <rect x="522" y="520" width="160" height="44" rx="22" fill="#A84231" fill-opacity="0.18" stroke="#A84231" stroke-opacity="0.36"/>
+  <text x="562" y="548" fill="#F0C6BF" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">REJECT</text>
+
+  <rect x="726" y="506" width="352" height="68" rx="22" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="752" y="536" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="18" textLength="276" lengthAdjust="spacingAndGlyphs">Windows executable, dashboard, API,</text>
+  <text x="752" y="560" fill="#D8E6F4" font-family="Arial, Helvetica, sans-serif" font-size="18" textLength="280" lengthAdjust="spacingAndGlyphs">CI/CD release flow, and quality docs</text>
+</svg>

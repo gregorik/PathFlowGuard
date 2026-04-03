@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.gregorigin.com">
-    <img src="docs/assets/readme-hero.svg" alt="PathFlow Guard overview" width="100%">
+    <img src="docs/assets/readme-hero-github.svg" alt="PathFlow Guard overview" width="100%">
   </a>
 </p>
 
