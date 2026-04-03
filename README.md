@@ -22,7 +22,7 @@ The repo centers on an executable Python application that screens pathology slid
 > [!IMPORTANT]
 > PathFlow Guard is workflow-support software, not autonomous diagnosis.
 
-**Quick links:** [Illustrated HTML manual](docs/site/index.html) | [Architecture](docs/architecture.md) | [Research basis](docs/research.md) | [Software lifecycle](docs/quality/software-lifecycle.md) | [Security](SECURITY.md) | [Contributing](CONTRIBUTING.md) | [Changelog](CHANGELOG.md)
+**Quick links:** [Illustrated online manual @ GregOrigin](https://gregorigin.com/PathFlowGuard/) | [Architecture](docs/architecture.md) | [Research basis](docs/research.md) | [Software lifecycle](docs/quality/software-lifecycle.md) | [Security](SECURITY.md) | [Contributing](CONTRIBUTING.md) | [Changelog](CHANGELOG.md)
 
 ## Table of contents
 
@@ -442,6 +442,6 @@ PathFlowGuard2026/
 
 ## License and security
 
-Researched and created by Andras Gregori @ [GregOrigin.com](https://gregorigin.com/). This repository is licensed under [MIT](LICENSE).
+Researched and created by Andras Gregori @ [GregOrigin.com](https://gregorigin.com/). This repository is licensed under [Apache 2.0](LICENSE).
 
 Security reports should use GitHub's private vulnerability reporting flow as described in [SECURITY.md](SECURITY.md).
