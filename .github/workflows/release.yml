@@ -44,9 +44,26 @@ jobs:
         shell: pwsh
         run: .\scripts\build_release.ps1 -Version $env:RELEASE_VERSION -Python "python"
 
-      - name: Optionally sign Windows executable
-        if: ${{ secrets.WINDOWS_CERT_BASE64 != '' && secrets.WINDOWS_CERT_PASSWORD != '' }}
+      - name: Detect signing configuration
+        id: signing
         shell: pwsh
+        env:
+          WINDOWS_CERT_BASE64: ${{ secrets.WINDOWS_CERT_BASE64 }}
+          WINDOWS_CERT_PASSWORD: ${{ secrets.WINDOWS_CERT_PASSWORD }}
+        run: |
+          if ($env:WINDOWS_CERT_BASE64 -and $env:WINDOWS_CERT_PASSWORD) {
+            "enabled=true" >> $env:GITHUB_OUTPUT
+          }
+          else {
+            "enabled=false" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Optionally sign Windows executable
+        if: steps.signing.outputs.enabled == 'true'
+        shell: pwsh
+        env:
+          WINDOWS_CERT_BASE64: ${{ secrets.WINDOWS_CERT_BASE64 }}
+          WINDOWS_CERT_PASSWORD: ${{ secrets.WINDOWS_CERT_PASSWORD }}
         run: |
           $releaseDir = ".\artifacts\release\$env:RELEASE_DIRNAME"
           $releaseExe = Join-Path $releaseDir "PathFlowGuard.exe"
@@ -54,7 +71,7 @@ jobs:
           $certPath = Join-Path $env:RUNNER_TEMP "pathflowguard-signing.pfx"
           [System.IO.File]::WriteAllBytes(
             $certPath,
-            [System.Convert]::FromBase64String("${{ secrets.WINDOWS_CERT_BASE64 }}")
+            [System.Convert]::FromBase64String($env:WINDOWS_CERT_BASE64)
           )
           $signtool = Get-ChildItem "C:\Program Files (x86)\Windows Kits\10\bin" -Recurse -Filter signtool.exe |
             Sort-Object FullName -Descending |
@@ -65,14 +82,14 @@ jobs:
           & $signtool sign `
             /fd SHA256 `
             /f $certPath `
-            /p "${{ secrets.WINDOWS_CERT_PASSWORD }}" `
+            /p $env:WINDOWS_CERT_PASSWORD `
             /tr http://timestamp.digicert.com `
             /td SHA256 `
             $releaseExe
           Copy-Item -LiteralPath $releaseExe -Destination $assetExe -Force
 
       - name: Refresh checksums after signing
-        if: ${{ secrets.WINDOWS_CERT_BASE64 != '' && secrets.WINDOWS_CERT_PASSWORD != '' }}
+        if: steps.signing.outputs.enabled == 'true'
         shell: pwsh
         run: |
           $releaseDir = ".\artifacts\release\$env:RELEASE_DIRNAME"
